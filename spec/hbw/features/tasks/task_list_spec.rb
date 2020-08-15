@@ -25,8 +25,8 @@ feature 'Check table with tasks', js: true do
 
       expect(tasks_table_content).to eq(
         [
-          ['Medium', 'Assigned task', ' Test name', '—', "expired (#{years_since(first_task_due_date)}y past due)"],
-          ['High', 'Other assigned task', ' Test name', 'Some test description', "expired (#{years_since(second_task_due_date)}y past due)"],
+          ['Medium', 'Assigned task', ' Test name', '—', "expired (#{years_since(first_task_due_date)}y past due date)"],
+          ['High', 'Other assigned task', ' Test name', 'Some test description', "expired (#{years_since(second_task_due_date)}y past due date)"],
           *Array.new(22) { ['High', 'Check test form', ' Test name', '—', '30 Jun 2016'] }
         ]
       )
@@ -39,8 +39,8 @@ feature 'Check table with tasks', js: true do
 
       expect(tasks_table_content).to eq(
         [
-          ['Medium', 'Unassigned task', ' Test name', '—', "expired (#{years_since(first_task_due_date)}y past due)", 'Claim'],
-          ['High', 'Other unassigned task', ' Test name', 'Some test description', "expired (#{years_since(second_task_due_date)}y past due)", 'Claim'],
+          ['Medium', 'Unassigned task', ' Test name', '—', "expired (#{years_since(first_task_due_date)}y past due date)", 'Claim'],
+          ['High', 'Other unassigned task', ' Test name', 'Some test description', "expired (#{years_since(second_task_due_date)}y past due date)", 'Claim'],
           ['High', 'Check test form', ' Test name', '—', '30 Jun 2016', 'Claim']
         ]
       )

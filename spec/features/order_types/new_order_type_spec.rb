@@ -7,7 +7,7 @@ feature 'Create new order type', js: true do
     expect(page).to     have_content 'Orders list'
 
     click_on 'Order types'
-    expect(page).to have_content 'Available order types definition'
+    expect(page).to have_content 'Order types'
     expect_widget_presence
   end
 
@@ -29,7 +29,7 @@ feature 'Create new order type', js: true do
 
     click_on 'Activate'
     expect(page).to have_css     '.growl-notice', text: 'Order type definition has been activated'
-    expect(page).to have_content 'Available order types definition'
+    expect(page).to have_content 'Order types'
     expect(page).to have_content 'Support Request'
     expect_widget_presence
     expect(OrderType.find_by_code('support_request').active).to be_truthy

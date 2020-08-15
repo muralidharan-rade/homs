@@ -26,7 +26,7 @@ feature 'Create new order', js: true do
       expect_widget_presence
 
       click_on 'Add'
-      expect(page).to have_content 'Adding order'
+      expect(page).to have_content 'Add order'
       expect_widget_presence
     end
 
@@ -92,7 +92,7 @@ feature 'Create new order', js: true do
     expect_widget_presence
 
     click_on 'Add'
-    expect(page).to have_content 'Adding order'
+    expect(page).to have_content 'Add order'
     expect_widget_presence
 
     fill_in('order[data][contractNumber]', with: invalid_contract_number)

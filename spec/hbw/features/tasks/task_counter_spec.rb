@@ -32,8 +32,8 @@ feature 'Check available tasks counter', js: true do
 
       expect(popup_tasks_list_content).to eq(
         [
-          "Assigned task\nexpired (#{years_since(first_task_due_date)}y past due)",
-          "Other assigned task\nSome test description\nexpired (#{years_since(second_task_due_date)}y past due)",
+          "Assigned task\nexpired (#{years_since(first_task_due_date)}y past due date)",
+          "Other assigned task\nSome test description\nexpired (#{years_since(second_task_due_date)}y past due date)",
           "Check test form\n30 Jun 2016",
           "Check test form\n30 Jun 2016",
           "Check test form\n30 Jun 2016",
@@ -49,8 +49,8 @@ feature 'Check available tasks counter', js: true do
 
       expect(popup_tasks_list_content).to eq(
         [
-          "Unassigned task\nexpired (#{years_since(first_task_due_date)}y past due)",
-          "Other unassigned task\nSome test description\nexpired (#{years_since(second_task_due_date)}y past due)",
+          "Unassigned task\nexpired (#{years_since(first_task_due_date)}y past due date)",
+          "Other unassigned task\nSome test description\nexpired (#{years_since(second_task_due_date)}y past due date)",
           "Check test form\n30 Jun 2016"
         ]
       )

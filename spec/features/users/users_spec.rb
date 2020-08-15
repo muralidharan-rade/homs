@@ -7,7 +7,7 @@ feature 'User is', js: true do
     signin(admin.email, admin.password)
 
     click_on 'Users'
-    expect(page).to have_content 'User list'
+    expect(page).to have_content 'Users'
     expect_widget_presence
 
     users = [
@@ -100,7 +100,7 @@ feature 'User is', js: true do
     signin(admin.email, admin.password)
 
     click_on 'Users'
-    expect(page).to have_content 'User list'
+    expect(page).to have_content 'Users'
     expect_widget_presence
 
     expect(admin.api_token).to be_nil
@@ -211,7 +211,7 @@ feature 'User is', js: true do
     signin(admin.email, admin.password)
 
     click_on 'Users'
-    expect(page).to have_content 'User list'
+    expect(page).to have_content 'Users'
     expect_widget_presence
 
     link_by_href("/users/#{john.id}").click
@@ -275,7 +275,7 @@ feature 'User is', js: true do
   scenario 'inaccessible for ordinary user' do
     signin(john.email, john.password)
 
-    expect(page).not_to have_content 'User list'
+    expect(page).not_to have_content 'Users'
   end
 
   scenario 'inaccessible for blocked user' do
